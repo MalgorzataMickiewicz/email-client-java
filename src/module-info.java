@@ -6,4 +6,5 @@ module JavaEmailClient {
 
     opens com.mm;
     opens com.mm.view;
+    opens com.mm.controler;
 }
