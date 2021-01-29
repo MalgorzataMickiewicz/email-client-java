@@ -12,7 +12,7 @@
       <ChoiceBox fx:id="themePicker" layoutX="180.0" layoutY="188.0" prefHeight="25.0" prefWidth="210.0" />
       <Label layoutX="84.0" layoutY="149.0" text="Font size:" />
       <Label layoutX="75.0" layoutY="192.0" text="Color theme:" />
-      <Label layoutX="239.0" layoutY="54.0" text="Options" />
+      <Label layoutX="239.0" layoutY="54.0" styleClass="big" text="Options" />
       <Button layoutX="344.0" layoutY="270.0" mnemonicParsing="false" onAction="#applyButtonAction" text="Apply" />
       <Button layoutX="213.0" layoutY="270.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel" />
    </children>
