@@ -23,8 +23,13 @@ public class MainWindowControler extends AbstractControler {
     }
 
     @FXML
-    void optionsAction( ) {
+    void optionsAction() {
         viewFactory.showOptionsWindow();
+    }
+
+    @FXML
+    void addAccountAction() {
+        viewFactory.showLoginWindow();
     }
 
 }
