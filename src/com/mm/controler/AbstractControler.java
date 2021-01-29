@@ -5,13 +5,17 @@ import com.mm.view.ViewFactory;
 
 public abstract class AbstractControler {
 
-    private EmailManager emailManager;
-    private ViewFactory viewFactory;
+    protected EmailManager emailManager;
+    protected ViewFactory viewFactory;
     private String fxmlName;
 
     public AbstractControler(EmailManager emailManager, ViewFactory viewFactory, String fxmlName) {
         this.emailManager = emailManager;
         this.viewFactory = viewFactory;
         this.fxmlName = fxmlName;
+    }
+
+    public String getFxmlName() {
+        return fxmlName;
     }
 }
