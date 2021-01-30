@@ -12,7 +12,7 @@ public enum ColorTheme  {
             case DARK:
                 return "css/themeDark.css";
             case DEAFULT:
-                return "css/themeDeafult.css";
+                return "css/themeDefault.css";
             default:
                 return null;
         }
