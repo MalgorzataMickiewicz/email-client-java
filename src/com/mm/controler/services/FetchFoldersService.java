@@ -52,11 +52,11 @@ public class FetchFoldersService extends Service<Void> {
                 return new Task() {
                     @Override
                     protected Object call() throws Exception {
-                        if(folder.getType() != Folder.HOLDS_FOLDERS){
+                        if (folder.getType() != Folder.HOLDS_FOLDERS) {
                             folder.open(Folder.READ_WRITE);
                             int folderSize = folder.getMessageCount();
-                            for(int i = folderSize; i > 0; i--){
-                                System.out.println(folder.getMessage(i).getSubject());
+                            for (int i = folderSize; i > 0; i--) {
+                                emailTreeItem.addEmail(folder.getMessage(i));
                             }
                         }
                         return null;
