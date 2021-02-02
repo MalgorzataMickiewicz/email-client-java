@@ -3,7 +3,7 @@ package com.mm.view;
 public enum ColorTheme  {
     LIGHT,
     DARK,
-    DEAFULT;
+    DEFAULT;
 
     public static String getCssPath(ColorTheme colorTheme) {
         switch (colorTheme) {
@@ -11,7 +11,7 @@ public enum ColorTheme  {
                 return "css/themeLight.css";
             case DARK:
                 return "css/themeDark.css";
-            case DEAFULT:
+            case DEFAULT:
                 return "css/themeDefault.css";
             default:
                 return null;
