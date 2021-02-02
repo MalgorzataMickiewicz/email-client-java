@@ -62,6 +62,11 @@ public class MainWindowControler extends AbstractControler implements Initializa
         viewFactory.showLoginWindow();
     }
 
+    @FXML
+    void composeMessageAction() {
+        viewFactory.showComposeMessageWindow();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setUpEmailsTreeView();
