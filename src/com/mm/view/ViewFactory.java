@@ -1,10 +1,7 @@
 package com.mm.view;
 
 import com.mm.EmailManager;
-import com.mm.controler.AbstractControler;
-import com.mm.controler.LoginWindowControler;
-import com.mm.controler.MainWindowControler;
-import com.mm.controler.OptionsWindowControler;
+import com.mm.controler.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -41,7 +38,6 @@ public class ViewFactory {
     }
 
     public void showLoginWindow() {
-
         AbstractControler controler = new LoginWindowControler(emailManager, this, "LoginWindow.fxml");
         initializeStage(controler);
     }
@@ -53,6 +49,11 @@ public class ViewFactory {
 
     public void showOptionsWindow() {
         AbstractControler controler = new OptionsWindowControler(emailManager, this, "OptionsWindow.fxml");
+        initializeStage(controler);
+    }
+
+    public void showComposeMessageWindow() {
+        AbstractControler controler = new ComposeMessageControler(emailManager, this, "ComposeMessageWindow.fxml");
         initializeStage(controler);
     }
     
