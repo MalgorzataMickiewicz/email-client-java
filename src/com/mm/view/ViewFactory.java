@@ -56,6 +56,11 @@ public class ViewFactory {
         AbstractControler controler = new ComposeMessageControler(emailManager, this, "ComposeMessageWindow.fxml");
         initializeStage(controler);
     }
+
+    public void showEmailDetailsWindow(){
+        AbstractControler controler = new EmailDetailsController(emailManager, this, "EmailDetailsWindow.fxml");
+        initializeStage(controler);
+    }
     
     private void initializeStage(AbstractControler abstractControler) {
 
@@ -70,6 +75,7 @@ public class ViewFactory {
         }
 
         Scene scene = new Scene(parent);
+        updateStyle(scene);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
@@ -81,12 +87,17 @@ public class ViewFactory {
         activeStages.remove(stageToClose);
     }
 
-    public void updateStyles() {
-        for(Stage stage: activeStages) {
+    public void updateAllStyles() {
+        for (Stage stage: activeStages) {
             Scene scene = stage.getScene();
-            scene.getStylesheets().clear();
-            scene.getStylesheets().add(getClass().getResource(colorTheme.getCssPath(colorTheme)).toExternalForm());
-            scene.getStylesheets().add(getClass().getResource(FontSize.getCssPath(fontSize)).toExternalForm());
+            updateStyle(scene);
         }
     }
+
+    private void updateStyle(Scene scene) {
+        scene.getStylesheets().clear();
+        scene.getStylesheets().add(getClass().getResource(ColorTheme.getCssPath(colorTheme)).toExternalForm());
+        scene.getStylesheets().add(getClass().getResource(FontSize.getCssPath(fontSize)).toExternalForm());
+    }
 }
+
