@@ -31,7 +31,7 @@ public class OptionsWindowControler extends AbstractControler implements Initial
     void applyButtonAction() {
         viewFactory.setColorTheme(themePicker.getValue());
         viewFactory.setFontSize(FontSize.values()[(int)(fontSizerPicker.getValue())]);
-        viewFactory.updateStyles();
+        viewFactory.updateAllStyles();
     }
 
     @FXML

@@ -73,7 +73,7 @@ public class LoginWindowControler extends AbstractControler implements Initializ
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        emailAddressField.setText("testowekontomm@gmail.com");
+        emailAddressField.setText("");
         passwordAddressField.setText("");
 
     }
